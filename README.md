@@ -1,6 +1,8 @@
 BP React demo's 
 
-cd into np
+How to start project:: 
+
+cd into bp
 
 npm i 
 
