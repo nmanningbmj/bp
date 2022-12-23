@@ -1,9 +1,19 @@
-BP React demo's 
+BP React demo's
 
-How to start project:: 
+https://create-react-app.dev/
 
-cd into bp
+************
+Libraries used:
 
-npm i 
+React router v6.4.3 : https://reactrouter.com/en/main/start/overview
+React bootstrap https://react-bootstrap.github.io/
 
-npm start 
+************
+How to start project:
+
+$cd bp
+$npm i 
+$npm start 
+
+************
+Feel free to add anything, contribute or try stuff out in this repo 
