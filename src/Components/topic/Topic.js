@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Data from "../../data/Data";
-import { Routes, Route, Link } from "react-router-dom";
+import Back from "../navigation/Back";
 
 const Topic = () => {
   const { id } = useParams({});
@@ -17,13 +17,13 @@ const Topic = () => {
 
   return (
     <div>
-      <Link to="/">
-        <h2>back</h2>
-      </Link>
+      <div className="container">
+        <Back />
 
-      <div className="t-summary">
-        <h1>{topic.topic}</h1>
-        <p>{topic.description}</p>
+        <div className="t-summary">
+          <h1>{topic.topic}</h1>
+          <p>{topic.description}</p>
+        </div>
       </div>
     </div>
   );
