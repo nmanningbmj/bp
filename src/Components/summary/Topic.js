@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Data from "../../data/Data";
-import Back from "../navigation/Back";
+import Back from "../../layouts/navigation/Back";
 
 const Topic = () => {
   const { id } = useParams({});

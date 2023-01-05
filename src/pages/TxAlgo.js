@@ -1,7 +1,7 @@
 import React from "react";
-import LeftPanels from "../treatmentAlgo/panels/LeftPanels";
-import { RightPanel } from "../treatmentAlgo/panels/RightPanel";
-import Back from "../navigation/Back";
+import LeftPanels from "../components/treatmentAlgo/panels/LeftPanel";
+import { RightPanel } from "../components/treatmentAlgo/panels/RightPanel";
+import Back from "../layouts/navigation/Back";
 
 const TxAlgo = () => {
   return (
