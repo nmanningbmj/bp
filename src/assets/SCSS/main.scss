@@ -1,0 +1,16 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@import "treatment-algorithm/tx";
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.navbar {
+  background-color: #2a6ebb;
+  color: white;
+}

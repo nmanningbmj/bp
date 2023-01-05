@@ -4,8 +4,6 @@ import TxContent from "../../data/TxContent";
 import { Routes, Route, Link } from "react-router-dom";
 
 const TopicList = () => {
-  console.log(TxContent);
-
   return (
     <div>
       <div className="container">

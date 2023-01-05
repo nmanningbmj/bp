@@ -1,14 +1,15 @@
-import "./App.css";
 import Data from "./data/Data";
-import Topic from "./Components/topic/Topic";
-import "./SCSS/main.css";
-import TopicList from "./Components/topic/TopicList";
-import TxAlgo from "./Components/pages/TxAlgo";
+import Topic from "./components/summary/Topic";
+import "./assets/SCSS/main.css";
+import Header from "./layouts/navigation/navbar/Header";
+import TopicList from "./components/summary/TopicList";
+import TxAlgo from "./pages/TxAlgo";
 import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <Routes>
         <Route path="/" element={<TopicList />} />
         <Route path="topic/:id" element={<Topic />} />
