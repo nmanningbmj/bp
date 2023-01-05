@@ -6,18 +6,21 @@ import Recommendations from "../Recommendations";
 
 const LeftPanels = () => {
   const [content, setContent] = useState(TxContent);
+  const [id, setId] = useState("1");
 
   function filterItem(id) {
     let contentId = id;
-    console.log(contentId);
-
-    const x = TxContent.filter((tx) => tx.id === contentId);
-
-    setContent(x);
-    console.log(x);
+    setId((id = contentId));
+    console.log(id);
   }
 
-  useEffect(() => {});
+  useEffect(() => {
+    const contentPanel = TxContent.find(function (e) {
+      return e.id == id;
+    });
+    setContent(contentPanel);
+    console.log(contentPanel);
+  }, [id]);
 
   return (
     <div className="left-panel">
