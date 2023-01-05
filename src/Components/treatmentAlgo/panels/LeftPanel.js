@@ -8,21 +8,16 @@ const LeftPanels = () => {
   const [content, setContent] = useState(TxContent);
 
   function filterItem(id) {
-    console.log("clicked");
-
     let contentId = id;
     console.log(contentId);
 
-    setContent(TxContent.filter((tx) => tx.id === contentId));
+    const x = TxContent.filter((tx) => tx.id === contentId);
 
-    console.log(setContent);
+    setContent(x);
+    console.log(x);
   }
 
-  /*
-  useEffect(
-    () => {
-  );
-  */
+  useEffect(() => {});
 
   return (
     <div className="left-panel">
