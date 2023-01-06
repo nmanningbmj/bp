@@ -20,7 +20,7 @@ const Recommendations = ({ filterItem }) => {
                     <a
                       className="recommendations__wrapper"
                       id={sub.id}
-                      onClick={() => filterItem(sub.id)}
+                      onClick={() => filterItem(1)}
                     >
                       <span
                         className={`${
