@@ -2,6 +2,8 @@ const TxContent = [
   {
     id: 1,
     header: "Inital",
+    example:
+      "this should be the content if I knew how to write a proper datastructure.......",
     recommendations: [
       { title: " suspected bacterial meningitis: presenting in the community" },
 
