@@ -1,7 +1,7 @@
 import React from "react";
 import TxContent from "../../data/TxContent";
 
-const Recommendations = ({ filterItem }) => {
+const Recommendations = ({ filterId }) => {
   return (
     <div>
       <div className="recommendations">
@@ -10,29 +10,29 @@ const Recommendations = ({ filterItem }) => {
             <div key={tx.id}>
               <h1 className="recommendations__header">{tx.header}</h1>
 
-              {tx.recommendations.map((sub, i) => {
+              {tx.recommendations.map((recom, i) => {
                 return (
                   <div className="recommendations__titles-wrap" key={i}>
                     <p className="recommendations__title fw-bold">
-                      {sub.title}
+                      {recom.title}
                     </p>
 
                     <a
                       className="recommendations__wrapper"
-                      id={sub.id}
-                      onClick={() => filterItem(1)}
+                      id={recom.id}
+                      onClick={() => filterId(1)}
                     >
                       <span
                         className={`${
-                          sub.type === "1st line"
+                          recom.type === "1st line"
                             ? "recommendations__type--light"
                             : "recommendations__type--dark"
                         }`}
                       >
-                        {sub.type}
+                        {recom.type}
                       </span>
 
-                      <p>{sub.recommendation}</p>
+                      <p>{recom.recommendation}</p>
                     </a>
                   </div>
                 );

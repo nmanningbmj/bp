@@ -8,7 +8,7 @@ const LeftPanels = () => {
   const [content, setContent] = useState(TxContent);
   const [id, setId] = useState([]);
 
-  function filterItem(id) {
+  function filterId(id) {
     let contentId = id;
     setId((id = contentId));
     console.log(id);
@@ -28,7 +28,7 @@ const LeftPanels = () => {
     <div>
       <div className="treatment-panels">
         <div className="left-panel">
-          <Recommendations filterItem={filterItem} />
+          <Recommendations filterId={filterId} />
         </div>
         <div className="right-panel">
           <RightPanel {...content} />
