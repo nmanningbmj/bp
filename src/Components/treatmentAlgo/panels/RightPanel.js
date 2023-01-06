@@ -1,10 +1,16 @@
 import React from "react";
+import DefaultTx from "../DefaultTx";
 
-export const RightPanel = ({ id, header }) => {
+export const RightPanel = ({ id, header, example }) => {
+  if (id === undefined) {
+    return <DefaultTx />;
+  }
+
   return (
-    <div className="right-panel">
-      <p>HEADER: {header}</p>
-      <h1>RECOMMENDATION ID : {id}</h1>
+    <div className="content">
+      <p>Recommendation header: {header}</p>
+      <h1>Recommendation ID : {id}</h1>
+      <p>{example}</p>
     </div>
   );
 };
