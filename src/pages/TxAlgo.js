@@ -1,6 +1,5 @@
 import React from "react";
 import LeftPanels from "../components/treatmentAlgo/panels/LeftPanel";
-import { RightPanel } from "../components/treatmentAlgo/panels/RightPanel";
 import Back from "../layouts/navigation/Back";
 
 const TxAlgo = () => {
@@ -9,10 +8,7 @@ const TxAlgo = () => {
       <div className="container">
         <Back />
 
-        <div className="treatment-panels">
-          <LeftPanels />
-          <RightPanel />
-        </div>
+        <LeftPanels />
       </div>
     </div>
   );

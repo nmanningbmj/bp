@@ -6,7 +6,7 @@ import Recommendations from "../Recommendations";
 
 const LeftPanels = () => {
   const [content, setContent] = useState(TxContent);
-  const [id, setId] = useState("1");
+  const [id, setId] = useState([]);
 
   function filterItem(id) {
     let contentId = id;
@@ -18,14 +18,22 @@ const LeftPanels = () => {
     const contentPanel = TxContent.find(function (e) {
       return e.id == id;
     });
+
+    console.log("filtered id ", contentPanel);
     setContent(contentPanel);
     console.log(contentPanel);
   }, [id]);
 
   return (
-    <div className="left-panel">
-      <Recommendations filterItem={filterItem} />
-      <RightPanel setItem={content} />
+    <div>
+      <div className="treatment-panels">
+        <div className="left-panel">
+          <Recommendations filterItem={filterItem} />
+        </div>
+        <div className="right-panel">
+          <RightPanel {...content} />
+        </div>
+      </div>
     </div>
   );
 };
