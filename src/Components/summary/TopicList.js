@@ -1,13 +1,12 @@
 import React from "react";
-import Data from "../../data/Data";
-import TxContent from "../../data/TxContent";
-import { Routes, Route, Link } from "react-router-dom";
+import Topics from "../../data/Topics";
+import { Link } from "react-router-dom";
 
 const TopicList = () => {
   return (
     <div>
       <div className="container">
-        {Data.map((topic, i) => (
+        {Topics.map((topic, i) => (
           <Link to={`topic/${topic.id}`}>
             <div className="" key={i}>
               <p> {topic.topic}</p>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Data from "../../data/Data";
+import Topics from "../../data/Topics";
 import Back from "../../layouts/navigation/Back";
 
 const Topic = () => {
@@ -9,7 +9,7 @@ const Topic = () => {
   const [topic, setTopic] = useState({});
 
   useEffect(() => {
-    const topicPage = Data.find(function (e) {
+    const topicPage = Topics.find(function (e) {
       return e.id == id;
     });
     setTopic(topicPage);

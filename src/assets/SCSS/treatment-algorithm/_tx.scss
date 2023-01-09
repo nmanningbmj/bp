@@ -11,13 +11,20 @@
   border-right: 2px solid #cccdcd;
   width: 25rem;
   height: max-content;
+  height: 38.75rem;
+  overflow: auto;
+  overflow-x: hidden;
 }
 
 .right-panel {
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
+
+  padding: 2rem;
+
+  height: 38.75rem;
+  overflow: auto;
+  overflow-x: hidden;
 }
 
 .recommendations {
