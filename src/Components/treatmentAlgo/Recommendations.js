@@ -2,10 +2,6 @@ import React from "react";
 import txRecommendations from "../../data/Recommendations";
 
 const Recommendations = ({ filterId }) => {
-  /*  const x = txData.map((recom) =>
-    recom.recommendations.map((sub) => sub.recommendations)
-  ); */
-
   return (
     <div>
       <div className="recommendations">
