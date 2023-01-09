@@ -1,4 +1,4 @@
-const Data = [
+const Topics = [
   {
     id: 1,
     topic: "Covid 19",
@@ -34,4 +34,4 @@ const Data = [
   },
 ];
 
-export default Data;
+export default Topics;

@@ -1,11 +1,15 @@
 import React from "react";
-import TxContent from "../../data/TxContent";
+import txRecommendations from "../../data/Recommendations";
 
 const Recommendations = ({ filterId }) => {
+  /*  const x = txData.map((recom) =>
+    recom.recommendations.map((sub) => sub.recommendations)
+  ); */
+
   return (
     <div>
       <div className="recommendations">
-        {TxContent.map((tx) => {
+        {txRecommendations.map((tx) => {
           return (
             <div key={tx.id}>
               <h1 className="recommendations__header">{tx.header}</h1>
@@ -17,23 +21,28 @@ const Recommendations = ({ filterId }) => {
                       {recom.title}
                     </p>
 
-                    <a
-                      className="recommendations__wrapper"
-                      id={recom.id}
-                      onClick={() => filterId(1)}
-                    >
-                      <span
-                        className={`${
-                          recom.type === "1st line"
-                            ? "recommendations__type--light"
-                            : "recommendations__type--dark"
-                        }`}
-                      >
-                        {recom.type}
-                      </span>
-
-                      <p>{recom.recommendation}</p>
-                    </a>
+                    {recom.recommendations.map((test) => {
+                      return (
+                        <div>
+                          <a
+                            className="recommendations__wrapper"
+                            id={test.id}
+                            onClick={() => filterId(test.id)}
+                          >
+                            <p
+                              className={`${
+                                test.type === "1st line"
+                                  ? "recommendations__type--light mb-0"
+                                  : "recommendations__type--dark mb-0"
+                              }`}
+                            >
+                              {test.type}
+                            </p>
+                            <p>{test.recommendation}</p>
+                          </a>
+                        </div>
+                      );
+                    })}
                   </div>
                 );
               })}
