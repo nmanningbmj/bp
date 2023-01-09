@@ -14,35 +14,37 @@ const Recommendations = ({ filterId }) => {
             <div key={tx.id}>
               <h1 className="recommendations__header">{tx.header}</h1>
 
-              {tx.recommendations.map((recom, i) => {
+              {tx.recommendations.map((subRecommendations, i) => {
                 return (
                   <div className="recommendations__titles-wrap" key={i}>
                     <p className="recommendations__title fw-bold">
-                      {recom.title}
+                      {subRecommendations.title}
                     </p>
 
-                    {recom.recommendations.map((test) => {
-                      return (
-                        <div>
-                          <a
-                            className="recommendations__wrapper"
-                            id={test.id}
-                            onClick={() => filterId(test.id)}
-                          >
-                            <p
-                              className={`${
-                                test.type === "1st line"
-                                  ? "recommendations__type--light mb-0"
-                                  : "recommendations__type--dark mb-0"
-                              }`}
+                    {subRecommendations.recommendations.map(
+                      (recommendations) => {
+                        return (
+                          <div>
+                            <a
+                              className="recommendations__wrapper"
+                              id={recommendations.id}
+                              onClick={() => filterId(recommendations.id)}
                             >
-                              {test.type}
-                            </p>
-                            <p>{test.recommendation}</p>
-                          </a>
-                        </div>
-                      );
-                    })}
+                              <p
+                                className={`${
+                                  recommendations.type === "1st line"
+                                    ? "recommendations__type--light mb-0"
+                                    : "recommendations__type--dark mb-0"
+                                }`}
+                              >
+                                {recommendations.type}
+                              </p>
+                              <p>{recommendations.recommendation}</p>
+                            </a>
+                          </div>
+                        );
+                      }
+                    )}
                   </div>
                 );
               })}

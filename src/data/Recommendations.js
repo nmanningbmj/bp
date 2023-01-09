@@ -20,24 +20,6 @@ const txRecommendations = [
           },
         ],
       },
-      {
-        id: 1,
-        title: "suspected bm222",
-        recommendations: [
-          {
-            id: 3,
-            type: "1st line",
-            recommendation: "urgent hospital transfer",
-            icon: false,
-          },
-          {
-            id: 4,
-            type: "consider",
-            recommendation: "empirical anitbiotics",
-            icon: false,
-          },
-        ],
-      },
     ],
   },
   {
@@ -45,36 +27,24 @@ const txRecommendations = [
     recommendations: [
       {
         id: 2,
-        title: "suspected bacterial meningitis: presenting in the community",
+        title: "confirmed bacterial meningitis: Haemophilus influenzae",
         recommendations: [
+          {
+            id: 3,
+            type: "1st line",
+            recommendation: "pathogen-targeted antibiotics",
+            icon: false,
+          },
+          {
+            id: 4,
+            type: "plus",
+            recommendation: "supportive care",
+            icon: false,
+          },
           {
             id: 5,
-            type: "1st line",
-            recommendation: "urgent hospital transfer",
-            icon: false,
-          },
-          {
-            id: 6,
-            type: "consider",
-            recommendation: "empirical antibiotic prior to hospital transfer",
-            icon: false,
-          },
-        ],
-      },
-      {
-        id: 3,
-        title: "suspected bm222",
-        recommendations: [
-          {
-            id: 7,
-            type: "1st line",
-            recommendation: "urgent hospital transfer",
-            icon: false,
-          },
-          {
-            id: 8,
-            type: "consider",
-            recommendation: "empirical anitbiotics",
+            type: "plus",
+            recommendation: "corticosteroid",
             icon: false,
           },
         ],
@@ -82,7 +52,5 @@ const txRecommendations = [
     ],
   },
 ];
-
-//console.log(txData);
 
 export default txRecommendations;

@@ -7,9 +7,9 @@ const TxAlgo = () => {
     <div>
       <div className="container">
         <Back />
-
-        <TxMenu />
       </div>
+
+      <TxMenu />
     </div>
   );
 };

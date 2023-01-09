@@ -18,16 +18,6 @@ const Topics = [
       " Diabetes is a general term for disorders characterised by polyuria. It usually refers to diabetes mellitus, a common chronic syndrome of impaired carbohydrate, protein, and fat metabolism owing to insufficient secretion of insulin and/or target-tissue insulin resistance. Complications of diabetes mellitus include both macrovascular (cardiovascular) and microvascular (retinopathy, nephropathy, or neuropathy) sequelae.",
   },
   {
-    id: 4,
-    topic: "CKD",
-    description: " asfasfasfasfasf",
-  },
-  {
-    id: 5,
-    topic: "Como",
-    description: " asfasfasfasfasf",
-  },
-  {
     id: 6,
     topic: "Treatment algorithm - Bacterial meningitis in adults",
     description: "Bacterial meningitis in adults",
