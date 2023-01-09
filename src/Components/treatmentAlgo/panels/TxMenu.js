@@ -5,23 +5,19 @@ import { RightPanel } from "./RightPanel";
 import Recommendations from "../Recommendations";
 
 const LeftPanels = () => {
-  const [content, setContent] = useState(TxContent);
   const [id, setId] = useState([]);
-
+  const [content, setContent] = useState(TxContent);
+  
   function filterId(id) {
     let contentId = id;
     setId((id = contentId));
-    console.log(id);
   }
 
   useEffect(() => {
     const contentPanel = TxContent.find(function (e) {
       return e.id == id;
     });
-
-    console.log("filtered id ", contentPanel);
     setContent(contentPanel);
-    console.log(contentPanel);
   }, [id]);
 
   return (
